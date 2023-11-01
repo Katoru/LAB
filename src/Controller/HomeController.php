@@ -21,7 +21,9 @@ class HomeController extends AbstractController
   {
     $this->localeSwitcher->setLocale('en');
     $this->localeSwitcher->setLocale('fr');
-    $this->localeSwitcher->setLocale('fi');
-    return $this->render('index/index.html.twig', []);
+    // $this->localeSwitcher->setLocale('fi');
+    return $this->render('index/index.html.twig', [
+      'locale' => $this->localeSwitcher->getLocale(),
+    ]);
   }
 }
