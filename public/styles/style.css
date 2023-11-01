@@ -1,0 +1,30 @@
+body {
+  padding : 0px;
+  margin : 0px;
+}
+
+
+.body {
+  padding:0.2rem;
+  display: flex;
+}
+
+.bodyHeader {
+  background-color : #E0E0E0;
+  min-height: 2vh;
+}
+
+.bodyContent {
+  background-color : #483970;
+  color :antiquewhite;
+  min-height: 90vh;
+}
+
+.bodyFooter {
+  background-color : #362B55;
+  color :antiquewhite;
+  justify-content: center;
+  margin-top: auto;
+  min-height: 2vh;
+}
+
