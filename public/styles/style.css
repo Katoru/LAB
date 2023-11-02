@@ -12,6 +12,7 @@ body {
 .bodyHeader {
   background-color : #E0E0E0;
   min-height: 2vh;
+  position : relative;
 }
 
 .bodyContent {
@@ -26,5 +27,11 @@ body {
   justify-content: center;
   margin-top: auto;
   min-height: 2vh;
+}
+
+.localisation {
+  position : absolute;
+  top : 0.2rem;
+  right : 0.2rem;
 }
 

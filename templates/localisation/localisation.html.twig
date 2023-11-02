@@ -1,0 +1,9 @@
+{% block localisation %}
+  <form method="post">
+    <select name="lang">
+      {% for index, aLocale in locales_values %}
+        <option value="{{ aLocale }}" {% if locale is same as(aLocale) %}selected{% endif %}>{{ locales_labels[index] }}</option>
+      {% endfor %}
+    </select><button type="submit" value="Ok" name="Ok">Ok</button>
+  </form>
+{% endblock %}
