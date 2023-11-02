@@ -1,12 +1,14 @@
 body {
   padding : 0px;
   margin : 0px;
+  font-size : 1.2rem;
 }
 
 
 .body {
   padding:0.2rem;
   display: flex;
+  min-height: 100vh;
 }
 
 .bodyHeader {
@@ -18,7 +20,7 @@ body {
 .bodyContent {
   background-color : #483970;
   color :antiquewhite;
-  min-height: 90vh;
+  min-height: 80vh;
 }
 
 .bodyFooter {
@@ -33,5 +35,9 @@ body {
   position : absolute;
   top : 0.2rem;
   right : 0.2rem;
+}
+
+.localisation select, .localisation select option, .localisation button {
+  font-size : 1.2rem;
 }
 
