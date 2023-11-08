@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="{{ locale }}">
+<html lang="{{ app.request.getLocale() }}">
   {% block head %}
     <head>
       <title>{% block websitePrefix %}LAB{% endblock %} - {% block pageTitle %}Accueil{% endblock %}</title>
       <link rel="shortcut icon" href="{{ asset('images/favicons/favicon.png') }}" type="image/x-icon">
       <link rel="icon" href="{{ asset('images/favicons/favicon.png') }}" type="image/x-icon">
-      <link href="styles/style.css" rel="stylesheet" type="text/css">
+      <link href="{{ asset('styles/style.css') }}" rel="stylesheet" type="text/css">
     </head>
   {% endblock %}
 
   <body>
     {% block bodyHeader %}<div class="body bodyHeader">{% include 'nav/nav.html.twig' %}</div>{% endblock %}
-    {% block bodyContent %}<div class="body bodyContent"><h1>Ceci est un titre</h1></div>{% endblock %}
+    {% block bodyContent %}<div class="body bodyContent"><h1>{{ 'placeholder.title' | trans }}</h1></div>{% endblock %}
     {% block bodyFooter %}<div class="body bodyFooter">Footer</div>{% endblock %}
   </body>
 </html>

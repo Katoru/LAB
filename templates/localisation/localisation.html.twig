@@ -1,9 +1,11 @@
 {% block localisation %}
-  <form method="post">
+  <form method="post" action="{{ path('homeWithoutLocale') }}">
     <select name="lang">
-      {% for index, aLocale in locales_values %}
-        <option value="{{ aLocale }}" {% if locale is same as(aLocale) %}selected{% endif %}>{{ locales_labels[index] }}</option>
+      {% for index, aLocale in locales_values|split('|') %}
+        <option value="{{ aLocale }}" {% if app.request.getLocale() is same as(aLocale) %}selected{% endif %}>{{ locales_labels|split('|')[index] }}</option>
       {% endfor %}
-    </select><button type="submit" value="Ok" name="Ok">Ok</button>
+    </select>
+    <input type="hidden" name="originURL" value="{{ app.request.attributes.get('_route') }}" />
+    <button type="submit" value="Ok" name="Ok">Ok</button>
   </form>
 {% endblock %}

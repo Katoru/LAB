@@ -1,11 +1,11 @@
 {% block nav %}
   <div role="navigation">
     <ul class="mainMenu">
-      <li>{{ 'nav.home'| trans }}</li>
-      <li>{{ 'nav.discography'| trans }}</li>
-      <li>{{ 'nav.biography'| trans }}</li>
-      <li>{{ 'nav.tour'| trans }}</li>
-      <li>{{ 'nav.newsletter'| trans }}</li>
+      <li><a href="{{ path('home') }}">{{ 'nav.home'| trans }}</a></li>
+      <li><a href="{{ path('discography') }}">{{ 'nav.discography'| trans }}</a></li>
+      <li><a href="{{ path('biography') }}">{{ 'nav.biography'| trans }}</a></li>
+      <li><a href="{{ path('tour') }}">{{ 'nav.tour'| trans }}</a></li>
+      <li><a href="{{ path('newsletter') }}">{{ 'nav.newsletter'| trans }}</a></li>
     </ul>
   </div>
   <div class="localisation">{% include 'localisation/localisation.html.twig' %}</div>

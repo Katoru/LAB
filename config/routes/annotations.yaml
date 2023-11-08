@@ -1,0 +1,10 @@
+# config/routes/annotations.yaml
+controllers:
+    resource: '../../src/Controller/'
+    type: annotation
+    # this is added to the beginning of all imported route URLs
+    prefix: '/_locale'
+    # these requirements are added to all imported routes
+    requirements:
+        _locale: '%app_locales_values%'
+
